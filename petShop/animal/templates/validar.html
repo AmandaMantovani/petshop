@@ -1,0 +1,7 @@
+{{ form.nome.label }} {{ form.nome.value }}<br />
+
+{{ form.nome }}<br />
+
+{% for animal in animais %}
+-> {{ animal.nome }} {{ animal.dono }}<br />
+{% endfor %}
