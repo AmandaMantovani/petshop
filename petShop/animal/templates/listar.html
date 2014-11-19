@@ -1,0 +1,27 @@
+
+{% block titulo %}Animais{% endblock titulo %}
+
+{% block conteudo %}
+<hr>
+<div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Raça</th>
+            <th>Dono</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for animal in animais %}
+          <tr>
+            <td><a href="/animais/editar/{{ animal.pk }}">{{ animal.nome }}</a></td>
+            <td>{{ animal.raca }}</td>
+            <td>{{ animal.dono }}</td>
+          </tr>
+        {% endfor %}  
+        </tbody>
+      </table>
+</div><!-- FIM TABELA -->
+
+{% endblock conteudo %}

@@ -19,3 +19,8 @@ def validar(request):
 			return render(request,'validar.html',{'form':form, 'animal':animal})
 		else:
 			return render(request,'index.html',{'form':form})
+
+def listar(request):
+	animal = Animal.objects.all()
+	return render(request, 'listar.html', {'animal': animal})
+

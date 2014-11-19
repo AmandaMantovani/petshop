@@ -6,4 +6,5 @@ admin.autodiscover()
 urlpatterns = patterns('',
 	url(r'^$','animal.views.index'),
 	url(r'^validar/$', 'animal.views.validar'),
+	url(r'^listar/$', 'animal.views.listar'),
 )
